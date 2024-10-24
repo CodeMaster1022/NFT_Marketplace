@@ -11,12 +11,12 @@ import ReactButton from "@/lib/components/button/ReactButton";
 import PrimaryButton from "@/lib/components/button/PrimaryButton";
 import { shortenAddress } from "@/lib/components/profile/profile-kit/ProfileHeader";
 
-type DetailedArtworkData = {
-  image_name: string;
-  image_owner: string;
-  image_prompt: string;
-  created_date: string;
-};
+// type DetailedArtworkData = {
+//   image_name: string;
+//   image_owner: string;
+//   image_prompt: string;
+//   created_date: string;
+// };
 
 export default function ArtworkDetailView({
   params,
