@@ -126,7 +126,7 @@ export default function ArtworkDetailView({
         <div className="mt-6">
           <PromptAccordion text={detailedArtworkData?.image_prompt || ""} />
         </div>
-{/* 
+
         <div className="mt-6 flex gap-3">
           <Input
             type="number"
@@ -161,7 +161,7 @@ export default function ArtworkDetailView({
               />
             }
           />
-        </div> */}
+        </div>
       </div>
     </div>
   );
