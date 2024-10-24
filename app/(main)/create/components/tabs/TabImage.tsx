@@ -24,17 +24,17 @@ export default function TabImage({
     { key: "Midjourney", label: "Midjourney" },
     { key: "DALL-E", label: "DALL-E" },
   ];
-  const styles = [
-    { name: "Pixel", model_id: "pixel-art-v3" },
-    { name: "Cartoon", model_id: "cartoonish" },
-    { name: "Anime", model_id: "anime-diffusion" },
-    { name: "Fantasy", model_id: "sdxl-basemodel-3-fantasy" },
-    { name: "3d", model_id: "realscifi" },
-    { name: "Sketch", model_id: "queratogray-sketch" },
-    { name: "Technology", model_id: "techrealistic" },
-    { name: "Digital-art", model_id: "spybg" },
-    { name: "Film", model_id: "realistic-vision-v40" },
-  ];
+  // const styles = [
+  //   { name: "Pixel", model_id: "pixel-art-v3" },
+  //   { name: "Cartoon", model_id: "cartoonish" },
+  //   { name: "Anime", model_id: "anime-diffusion" },
+  //   { name: "Fantasy", model_id: "sdxl-basemodel-3-fantasy" },
+  //   { name: "3d", model_id: "realscifi" },
+  //   { name: "Sketch", model_id: "queratogray-sketch" },
+  //   { name: "Technology", model_id: "techrealistic" },
+  //   { name: "Digital-art", model_id: "spybg" },
+  //   { name: "Film", model_id: "realistic-vision-v40" },
+  // ];
 
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
     null
