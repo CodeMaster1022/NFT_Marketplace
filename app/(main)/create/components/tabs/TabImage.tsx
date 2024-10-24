@@ -24,17 +24,17 @@ export default function TabImage({
     { key: "Midjourney", label: "Midjourney" },
     { key: "DALL-E", label: "DALL-E" },
   ];
-  // const styles = [
-  //   { name: "Pixel", model_id: "pixel-art-v3" },
-  //   { name: "Cartoon", model_id: "cartoonish" },
-  //   { name: "Anime", model_id: "anime-diffusion" },
-  //   { name: "Fantasy", model_id: "sdxl-basemodel-3-fantasy" },
-  //   { name: "3d", model_id: "realscifi" },
-  //   { name: "Sketch", model_id: "queratogray-sketch" },
-  //   { name: "Technology", model_id: "techrealistic" },
-  //   { name: "Digital-art", model_id: "spybg" },
-  //   { name: "Film", model_id: "realistic-vision-v40" },
-  // ];
+  const styles = [
+    { name: "Pixel", model_id: "pixel-art-v3" },
+    { name: "Cartoon", model_id: "cartoonish" },
+    { name: "Anime", model_id: "anime-diffusion" },
+    { name: "Fantasy", model_id: "sdxl-basemodel-3-fantasy" },
+    { name: "3d", model_id: "realscifi" },
+    { name: "Sketch", model_id: "queratogray-sketch" },
+    { name: "Technology", model_id: "techrealistic" },
+    { name: "Digital-art", model_id: "spybg" },
+    { name: "Film", model_id: "realistic-vision-v40" },
+  ];
 
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
     null
@@ -53,7 +53,7 @@ export default function TabImage({
             <p>Image Prompt</p>
             <p>Random Prompt</p>
           </div>
-          <Textarea
+          {/* <Textarea
             variant="bordered"
             aria-label="prompt"
             labelPlacement="outside"
@@ -61,7 +61,7 @@ export default function TabImage({
             onChange={(e) => setInputText(e.target.value)}
             placeholder="Describe something you'd like to see generated. Experiment with different words and styles..."
             className="!text-[12px] col-span-12 md:col-span-6 mb-6 md:mb-0"
-          />
+          /> */}
         </div>
         <div className="mb-5">
           <p className="mb-1">Select a Style</p>
