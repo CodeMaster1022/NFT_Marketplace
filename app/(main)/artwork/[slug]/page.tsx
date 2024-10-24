@@ -11,12 +11,12 @@ import ReactButton from "@/lib/components/button/ReactButton";
 import PrimaryButton from "@/lib/components/button/PrimaryButton";
 import { shortenAddress } from "@/lib/components/profile/profile-kit/ProfileHeader";
 
-// type DetailedArtworkData = {
-//   image_name: string;
-//   image_owner: string;
-//   image_prompt: string;
-//   created_date: string;
-// };
+type DetailedArtworkData = {
+  image_name: string;
+  image_owner: string;
+  image_prompt: string;
+  created_date: string;
+};
 
 export default function ArtworkDetailView({
   params,
@@ -51,45 +51,45 @@ export default function ArtworkDetailView({
     }
   }, [isMintSuccess]);
 
-  const mintNow = async () => {
-    if (nftName === "") {
-      customToast("failed", "Insert NFT name");
-      return;
-    }
+  // const mintNow = async () => {
+  //   if (nftName === "") {
+  //     customToast("failed", "Insert NFT name");
+  //     return;
+  //   }
 
-    try {
-      const res = await postServer("/nft/mintbyartwork", {
-        address: address as string,
-        name: nftName,
-        url: detailedArtworkData?.image_name,
-      });
+  //   try {
+  //     const res = await postServer("/nft/mintbyartwork", {
+  //       address: address as string,
+  //       name: nftName,
+  //       url: detailedArtworkData?.image_name,
+  //     });
 
-      if (res.success === true) {
-        const { metadataURL, assetURL } = res;
+  //     if (res.success === true) {
+  //       const { metadataURL, assetURL } = res;
 
-        console.log(metadataURL);
-        try {
-          const tx = await mintNFT(metadataURL, royalty);
+  //       console.log(metadataURL);
+  //       try {
+  //         const tx = await mintNFT(metadataURL, royalty);
 
-          if (tx) {
-            setTimeout(async () => {
-              if (tx) {
-                const response = await postServer("/nft/save", {
-                  tx,
-                  assetURL,
-                  prompt: detailedArtworkData?.image_prompt,
-                });
-              }
-            }, 30000);
-          }
-        } catch (err) {
-          console.log(err);
-        }
-      }
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  //         if (tx) {
+  //           setTimeout(async () => {
+  //             if (tx) {
+  //               const response = await postServer("/nft/save", {
+  //                 tx,
+  //                 assetURL,
+  //                 prompt: detailedArtworkData?.image_prompt,
+  //               });
+  //             }
+  //           }, 30000);
+  //         }
+  //       } catch (err) {
+  //         console.log(err);
+  //       }
+  //     }
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
   return (
     <div className="main-pt">
