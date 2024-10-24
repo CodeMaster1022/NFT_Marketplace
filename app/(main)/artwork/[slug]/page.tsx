@@ -104,10 +104,10 @@ export default function ArtworkDetailView({
             </div>
             <div>{detailedArtworkData?.created_date}</div>
           </div>
-          {/* <div className="flex gap-3 lg:gap-6">
+          <div className="flex gap-3 lg:gap-6">
             <ReactButton type="fire" value={3767} />
             <ReactButton type="like" value={0} />
-          </div> */}
+          </div>
         </div>
 
         <div className="flex justify-center">
@@ -126,7 +126,7 @@ export default function ArtworkDetailView({
         <div className="mt-6">
           <PromptAccordion text={detailedArtworkData?.image_prompt || ""} />
         </div>
-
+{/* 
         <div className="mt-6 flex gap-3">
           <Input
             type="number"
@@ -161,7 +161,7 @@ export default function ArtworkDetailView({
               />
             }
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
