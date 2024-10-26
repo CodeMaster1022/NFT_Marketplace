@@ -60,7 +60,7 @@ export default function ImageCard(props: CardProps) {
           placement="bottom-end"
           size="sm"
         >
-          {/* <Button
+          <Button
             isIconOnly
             className="absolute right-3 top-3 z-20 bg-background/60 backdrop-blur-md backdrop-saturate-150 dark:bg-default-100/50"
             radius="full"
@@ -73,7 +73,7 @@ export default function ImageCard(props: CardProps) {
               icon="solar:heart-bold"
               width={20}
             />
-          </Button> */}
+          </Button>
         </Tooltip>
       </div>
     </Card>
