@@ -53,7 +53,7 @@ export default function TabImage({
             <p>Image Prompt</p>
             <p>Random Prompt</p>
           </div>
-          {/* <Textarea
+          <Textarea
             variant="bordered"
             aria-label="prompt"
             labelPlacement="outside"
@@ -61,7 +61,7 @@ export default function TabImage({
             onChange={(e) => setInputText(e.target.value)}
             placeholder="Describe something you'd like to see generated. Experiment with different words and styles..."
             className="!text-[12px] col-span-12 md:col-span-6 mb-6 md:mb-0"
-          /> */}
+          />
         </div>
         <div className="mb-5">
           <p className="mb-1">Select a Style</p>
