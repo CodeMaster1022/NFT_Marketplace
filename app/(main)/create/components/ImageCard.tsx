@@ -25,15 +25,15 @@ export default function ImageCard(props: CardProps) {
   const { isSaving, isSaved, setIsSaved, saveImage } = useSaveImage();
   const customToast = useToast();
 
-  useEffect(() => {
-    if (isSaved === "success") {
-      customToast("success", "Successfully Saved");
-      setIsSaved("");
-    } else if (isSaved === "failed") {
-      customToast("failed", "Already exist in your artwork");
-      setIsSaved("");
-    }
-  }, [isSaved]);
+  // useEffect(() => {
+  //   if (isSaved === "success") {
+  //     customToast("success", "Successfully Saved");
+  //     setIsSaved("");
+  //   } else if (isSaved === "failed") {
+  //     customToast("failed", "Already exist in your artwork");
+  //     setIsSaved("");
+  //   }
+  // }, [isSaved]);
 
   function handleClick() {
     setSelectedImage(id);
