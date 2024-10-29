@@ -19,7 +19,7 @@ export default function RatioCard({ size, imageSize ,setImageSize }: RatioCardPr
       onClick={handleRatioClick}
       className={`${size > 3 ? "col-span-3" : "col-span-2"} ${imageSize===size ? "bg-[#15BFFD]" : "bg-white/5"} border-none hover:cursor-pointer`}
     >
-      {/* <CardBody onClick={handleRatioClick} className="items-center justify-center">
+      <CardBody onClick={handleRatioClick} className="items-center justify-center">
         <div
           className={
             twMerge(
@@ -37,7 +37,7 @@ export default function RatioCard({ size, imageSize ,setImageSize }: RatioCardPr
           {size === 4 && "16:9"}
           {size === 5 && "9:16"}
         </p>
-      </CardBody> */}
+      </CardBody>
     </Card>
   );
 }
