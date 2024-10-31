@@ -67,13 +67,13 @@ const SiweButton = () => {
   }, [address, onSignIn]);
 
   return (
-    // <Button
-    //   startContent={<WalletIcon className="text-default-500" width={24} />}
-    //   variant="bordered"
-    //   onClick={onSignIn}
-    // >
-    //   Sign Up with Wallet
-    // </Button>
+    <Button
+      startContent={<WalletIcon className="text-default-500" width={24} />}
+      variant="bordered"
+      onClick={onSignIn}
+    >
+      Sign Up with Wallet
+    </Button>
   );
 };
 
