@@ -43,7 +43,7 @@ export default function Component() {
               type="email"
               variant="underlined"
             />
-            {/* <Input
+            <Input
               isRequired
               endContent={
                 <button type="button" onClick={toggleVisibility}>
@@ -65,7 +65,7 @@ export default function Component() {
               placeholder="Create a password"
               type={isVisible ? "text" : "password"}
               variant="underlined"
-            /> */}
+            />
             <Input
               isRequired
               label="Confirm Password"
