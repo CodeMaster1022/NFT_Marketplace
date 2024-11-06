@@ -17,48 +17,48 @@ const SiweButton = () => {
 
   const modalOpened = useRef(false);
 
-  // const onSignIn = useCallback(async () => {
-  //   const callbackUrl = "/explore";
-  //   if (!address) {
-  //     localStorage.removeItem("wallteconnet");
-  //     localStorage.removeItem("wagmi.wallet");
-  //     localStorage.removeItem("wagmi.store");
-  //     localStorage.removeItem("wagmi.connected");
+  const onSignIn = useCallback(async () => {
+    const callbackUrl = "/explore";
+    if (!address) {
+      localStorage.removeItem("wallteconnet");
+      localStorage.removeItem("wagmi.wallet");
+      localStorage.removeItem("wagmi.store");
+      localStorage.removeItem("wagmi.connected");
 
-  //     modalOpened.current = true;
-  //     open();
-  //   } else {
-  //     modalOpened.current = false;
+      modalOpened.current = true;
+      open();
+    } else {
+      modalOpened.current = false;
 
-  //     try {
-  //       const { nonce } = await authChallenge(address);
-  //       console.log(nonce);
-  //       const siwe = new SiweMessage({
-  //         domain: window.location.host,
-  //         address: address,
-  //         statement: "Sign in with Ethereum to the app.",
-  //         uri: window.location.origin,
-  //         version: "1",
-  //         chainId: chains[0].id,
-  //         nonce: nonce,
-  //       });
+      try {
+        const { nonce } = await authChallenge(address);
+        console.log(nonce);
+        const siwe = new SiweMessage({
+          domain: window.location.host,
+          address: address,
+          statement: "Sign in with Ethereum to the app.",
+          uri: window.location.origin,
+          version: "1",
+          chainId: chains[0].id,
+          nonce: nonce,
+        });
 
-  //       const message = siwe.prepareMessage();
-  //       const signature = await signMessageAsync({
-  //         message,
-  //       });
+        const message = siwe.prepareMessage();
+        const signature = await signMessageAsync({
+          message,
+        });
 
-  //       signIn("siwe", {
-  //         message: JSON.stringify(message),
-  //         redirect: true,
-  //         signature,
-  //         callbackUrl,
-  //       });
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   }
-  // }, [address]);
+        signIn("siwe", {
+          message: JSON.stringify(message),
+          redirect: true,
+          signature,
+          callbackUrl,
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  }, [address]);
 
   useEffect(() => {
     if (address && modalOpened.current) {
